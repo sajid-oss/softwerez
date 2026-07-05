@@ -40,15 +40,16 @@ function initGrid() {
 }
 
 function setupWorkspace(id, name) {
-    document.getElementById('tools-section').classList.add('hidden');
-    document.getElementById('tool-workspace').classList.remove('hidden');
+    document.getElementById('tools-section').style.display = 'none';
+    const ws = document.getElementById('tool-workspace');
+    ws.classList.remove('hidden');
     document.getElementById('active-tool-title').innerText = name;
     document.getElementById('dynamic-inputs').innerHTML = `<input type="file" id="user-file" accept=".pdf,.jpg,.png,.docx,.xlsx,.pptx">`;
 }
 
 function closeWorkspace() {
     document.getElementById('tool-workspace').classList.add('hidden');
-    document.getElementById('tools-section').classList.remove('hidden');
+    document.getElementById('tools-section').style.display = 'grid';
 }
 
 function executeToolActiveLogic() {
