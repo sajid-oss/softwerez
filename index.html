@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Zone - Online PDF Tools</title>
+    <title>PDF Zone | All PDF Tools in One Place</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
     <header class="main-header">
         <div class="logo">PDF<span>Zone</span></div>
-        <nav class="navbar">
-            <a href="#" onclick="location.reload()">Home</a>
-        </nav>
+        <div class="ad-top-right">Adsterra Slot</div>
     </header>
 
     <main class="container">
-        <div id="tool-workspace" class="workspace hidden">
-            <button class="close-btn" onclick="closeWorkspace()">← Back to All Tools</button>
-            <h2 id="active-tool-title" class="tool-title"></h2>
-            <div class="workspace-body">
-                <div id="dynamic-inputs"></div>
-                <div id="param-box" class="hidden"></div>
-                <button id="action-btn" class="action-btn" onclick="executeToolActiveLogic()">Process & Download</button>
-                <div id="status-message" class="status"></div>
-            </div>
+        <div class="side-ad-fixed">
+            <div style="height: 600px; background: #ddd; border: 1px dashed #999; display:flex; align-items:center; justify-content:center;">Sidebar Ad</div>
         </div>
 
-        <div class="tools-grid" id="tools-section">
-            </div>
+        <section id="tools-section" class="tools-grid"></section>
+
+        <div id="tool-workspace" class="hidden">
+            <button onclick="closeWorkspace()">← Back</button>
+            <h2 id="active-tool-title"></h2>
+            <div id="dynamic-inputs"></div>
+            <button onclick="executeToolActiveLogic()">Process & Download</button>
+            <div id="status-message"></div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 PDF Zone. All Rights Reserved.</p>
+        <p>&copy; 2026 PDF Zone - Professional PDF Utilities</p>
     </footer>
 
     <script src="script.js"></script>

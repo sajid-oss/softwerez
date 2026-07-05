@@ -31,7 +31,7 @@ const allTools = [
 function initGrid() {
     const grid = document.getElementById('tools-section');
     grid.innerHTML = allTools.map(t => `
-        <div class="tool-card" onclick="setupWorkspace('${t.id}', '${t.name}', '${t.desc}', 'pdf')">
+        <div class="tool-card" onclick="setupWorkspace('${t.id}', '${t.name}')">
             <div class="tool-icon">${t.icon}</div>
             <h3>${t.name}</h3>
             <p>${t.desc}</p>
@@ -39,6 +39,5 @@ function initGrid() {
     `).join('');
 }
 
+// Baki functions (setupWorkspace, closeWorkspace, etc.) pehle ki tarah hi rahenge.
 window.onload = initGrid;
-
-// [Baaki Functions: setupWorkspace, closeWorkspace, executeToolActiveLogic yahan add karein]
