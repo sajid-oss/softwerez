@@ -1,34 +1,22 @@
-/* General Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; }
+body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; padding-bottom: 80px; }
 
-/* Header - Modern Red */
-.main-header { background: linear-gradient(135deg, #e53e3e, #c53030); color: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.logo { font-size: 28px; font-weight: 800; letter-spacing: -1px; }
+.main-header { background: linear-gradient(135deg, #e53e3e, #c53030); color: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 28px; font-weight: 800; }
 .logo span { color: #ffdada; }
 
-/* Tool Grid Section */
+.welcome-banner { background: white; padding: 40px 20px; text-align: center; border-bottom: 1px solid #edf2f7; }
+
 .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
 .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
 
-/* Advanced Card Design */
-.tool-card { background: white; border-radius: 12px; padding: 30px; text-align: center; border: 1px solid #eef0f2; 
-             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.tool-card:hover { transform: translateY(-12px); box-shadow: 0 20px 30px rgba(0,0,0,0.15); border-color: #e53e3e; }
+.tool-card { background: white; border-radius: 12px; padding: 30px; text-align: center; border: 1px solid #eef0f2; transition: 0.4s; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.tool-card:hover { transform: translateY(-10px); border-color: #e53e3e; box-shadow: 0 20px 30px rgba(0,0,0,0.15); }
 .tool-icon { font-size: 45px; margin-bottom: 20px; display: block; }
-.tool-card h3 { margin-bottom: 10px; color: #1a202c; font-size: 1.1rem; }
-.tool-card p { font-size: 0.85rem; color: #718096; }
 
-/* Ad Containers */
-.side-ad-fixed { position: fixed; right: 15px; top: 25%; width: 160px; z-index: 999; }
-.ad-top-right { background: #eee; padding: 10px; border-radius: 8px; font-size: 10px; }
+/* Ads */
+.side-ad-fixed { position: fixed; right: 10px; top: 20%; width: 160px; z-index: 999; }
+.bottom-ad-fixed { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 2px solid #e53e3e; z-index: 1000; text-align: center; padding: 5px; }
 
-/* Footer */
-footer { background: #000; color: white; padding: 50px 20px; text-align: center; margin-top: 80px; }
 .hidden { display: none !important; }
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .side-ad-fixed { display: none; }
-    .main-header { flex-direction: column; gap: 15px; }
-}
+footer { background: #000; color: white; padding: 20px; text-align: center; }
