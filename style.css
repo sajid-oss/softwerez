@@ -1,32 +1,16 @@
-/* Body Background */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #ffffff; /* White Body */
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
+body { background-color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; }
 
-/* Red Header */
-.main-header {
-    background-color: #e53e3e; /* Professional Red */
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+.main-header { background-color: #e53e3e; color: white; padding: 20px 40px; display: flex; justify-content: space-between; }
+.logo { font-size: 24px; font-weight: bold; }
+.logo span { color: #fecaca; }
 
-.main-header .logo { color: white; }
-.main-header .logo span { color: #fecaca; }
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; padding: 40px; max-width: 1200px; margin: auto; }
 
-/* Black Footer */
-footer {
-    background-color: #000000; /* Black Footer */
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 14px;
-}
+.tool-card { background: #ffffff; border: 1px solid #e0e0e0; padding: 25px; border-radius: 15px; text-align: center; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.tool-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px rgba(0,0,0,0.15); border-color: #e53e3e; }
+
+.tool-icon { font-size: 40px; margin-bottom: 15px; }
+.tool-card h3 { margin: 10px 0; color: #2d3748; }
+
+footer { background-color: #000000; color: #ffffff; padding: 30px; text-align: center; margin-top: 40px; }
+.hidden { display: none; }

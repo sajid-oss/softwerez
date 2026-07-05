@@ -5,43 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Zone - Online PDF Tools</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Required PDF Processing Libraries -->
     <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
-    <!-- Red Header -->
     <header class="main-header">
         <div class="logo">PDF<span>Zone</span></div>
         <nav class="navbar">
-            <a href="#home" onclick="closeWorkspace()">Home</a>
-            <a href="#tools-section">All Tools</a>
+            <a href="#" onclick="location.reload()">Home</a>
         </nav>
-        
-        <!-- ADSTERRA: Top Right Ad Container -->
-        <div class="ad-top-right">
-            <!-- Apna Adsterra Code Yahan Paste Karein -->
-            <div style="width: 468px; height: 60px; background: #222; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; border-radius: 4px;">
-                Adsterra Top Banner (468x60)
-            </div>
-        </div>
     </header>
 
-    <!-- Main Body Section -->
     <main class="container">
-        
-        <!-- Hero Intro -->
-        <section class="hero-section" id="home">
-            <h1>Every tool you need to use PDFs, 100% free</h1>
-            <p>Merge, split, compress, convert, rotate, unlock and watermark PDFs with just a few clicks.</p>
-        </section>
-
-        <!-- Dynamic Workspace for handling active tools -->
         <div id="tool-workspace" class="workspace hidden">
             <button class="close-btn" onclick="closeWorkspace()">← Back to All Tools</button>
-            <div id="active-tool-title" class="tool-title">Tool Name</div>
-            
+            <h2 id="active-tool-title" class="tool-title"></h2>
             <div class="workspace-body">
                 <div id="dynamic-inputs"></div>
                 <div id="param-box" class="hidden"></div>
@@ -50,62 +29,14 @@
             </div>
         </div>
 
-        <!-- Grid Cards Section -->
         <div class="tools-grid" id="tools-section">
-            <!-- Organize Tools -->
-            <div class="tool-card" onclick="setupWorkspace('merge', 'Merge PDF', 'Combine multiple PDFs into one document.', 'pdf', true)">
-                <div class="tool-icon">📁</div><h3>Merge PDF</h3><p>Combine PDFs in the order you want.</p>
             </div>
-            <div class="tool-card" onclick="setupWorkspace('split', 'Split PDF', 'Extract pages from your PDF file.', 'pdf')">
-                <div class="tool-icon">✂️</div><h3>Split PDF</h3><p>Separate one page or whole set.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('organize', 'Organize PDF', 'Delete or reorder pages of PDF.', 'pdf')">
-                <div class="tool-icon">🗂️</div><h3>Organize PDF</h3><p>Sort, add or delete PDF pages.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('compress', 'Compress PDF', 'Reduce file size while keeping quality.', 'pdf')">
-                <div class="tool-icon">📉</div><h3>Compress PDF</h3><p>Smaller size, same exact quality.</p>
-            </div>
+    </main>
 
-            <!-- Convert TO PDF Tools -->
-            <div class="tool-card" onclick="setupWorkspace('word-to-pdf', 'Word to PDF', 'Convert DOCX files to PDF layout.', 'word')">
-                <div class="tool-icon">📝</div><h3>Word to PDF</h3><p>Make DOC and DOCX files easy to read.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('excel-to-pdf', 'Excel to PDF', 'Convert Excel spreadsheets to PDF.', 'excel')">
-                <div class="tool-icon">📊</div><h3>Excel to PDF</h3><p>Make EXCEL sheets clean PDFs.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('ppt-to-pdf', 'PowerPoint to PDF', 'Convert PPT presentations to PDF.', 'ppt')">
-                <div class="tool-icon">📉</div><h3>PowerPoint to PDF</h3><p>Convert slides to documents.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('jpg-to-pdf', 'JPG to PDF', 'Convert images to PDF file.', 'image')">
-                <div class="tool-icon">🖼️</div><h3>JPG to PDF</h3><p>Convert JPG, PNG, BMP images.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('html-to-pdf', 'HTML to PDF', 'Convert webpages or HTML to PDF.', 'html_text')">
-                <div class="tool-icon">🌐</div><h3>HTML to PDF</h3><p>Save webpage as document code.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('scan-to-pdf', 'Scan to PDF', 'Convert scan files or camera shot to PDF.', 'image')">
-                <div class="tool-icon">🖨️</div><h3>Scan to PDF</h3><p>Turn image scans into PDF formatting.</p>
-            </div>
+    <footer>
+        <p>&copy; 2026 PDF Zone. All Rights Reserved.</p>
+    </footer>
 
-            <!-- Convert FROM PDF Tools -->
-            <div class="tool-card" onclick="setupWorkspace('pdf-to-word', 'PDF to Word', 'Extract text from PDF to Word document.', 'pdf')">
-                <div class="tool-icon">📘</div><h3>PDF to Word</h3><p>Convert PDF back to clean DOCX.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('pdf-to-excel', 'PDF to Excel', 'Extract tables from PDF to Excel sheets.', 'pdf')">
-                <div class="tool-icon">🟢</div><h3>PDF to Excel</h3><p>Pull data from PDF into spreadsheets.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('pdf-to-ppt', 'PDF to PowerPoint', 'Convert PDF pages into PPT presentation.', 'pdf')">
-                <div class="tool-icon">🍊</div><h3>PDF to PowerPoint</h3><p>Turn document back to PPT presentation.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('pdf-to-jpg', 'PDF to JPG', 'Extract all pictures or convert pages to JPG.', 'pdf')">
-                <div class="tool-icon">📸</div><h3>PDF to JPG</h3><p>Extract all pictures or convert pages.</p>
-            </div>
-
-            <!-- Optimization & Security Tools -->
-            <div class="tool-card" onclick="setupWorkspace('edit', 'Edit PDF', 'Add text, shapes, or notes to your PDF.', 'pdf_edit')">
-                <div class="tool-icon">✍️</div><h3>Edit PDF</h3><p>Add text, drawings or highlights.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('sign', 'Sign PDF', 'Add your digital signature or stamp to PDF.', 'pdf')">
-                <div class="tool-icon">✒️</div><h3>Sign PDF</h3><p>Sign yourself or request signatures.</p>
-            </div>
-            <div class="tool-card" onclick="setupWorkspace('watermark', 'Watermark PDF', 'Stamp an image or text over your PDF.', 'pdf')">
-                <div class="tool-icon">🧼</div><h3>Watermark</h3><p>Stamp an image or text over files.</p>
+    <script src="script.js"></script>
+</body>
+</html>
